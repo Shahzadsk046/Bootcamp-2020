@@ -14,7 +14,6 @@ const Parent = () => {
         <div>
 
         <h1>I am Parent Component</h1>
-        <h2>My Name is Khan</h2>
         <Child />
         <Child2 />
         {/* <Child name={props.name}/> */}
