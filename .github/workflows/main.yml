@@ -23,24 +23,24 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2-beta
         with:
-          node-version: 12
+          version: 12
         
       
         
-#       - name: GitHub Action for Yarn
-#         uses: Borales/actions-yarn@v2.3.0
-#         with:
+      - name: GitHub Action for Yarn
+        uses: Borales/actions-yarn@v2.3.0
+        with:
     # Yarn command
-#           cmd: install # npm install/ yarn install
+          cmd: install # npm install/ yarn install
           
 #       - name: Build Yarn and npm
 #         uses: linchpin/action-build-yarn-npm@master
         
-#       - name: Creating build
-#         run: yarn run build
+      - name: Creating build
+        run: yarn build
           
       - name: installing surge
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge ./ http://class5_shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build http://class5_shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
