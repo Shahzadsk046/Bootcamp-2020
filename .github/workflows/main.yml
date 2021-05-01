@@ -33,11 +33,10 @@ jobs:
         
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: install # will run `yarn install` command
+          run: yarn install # will run `yarn install` command
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.0.0
+          run: yarn build # will run `yarn build` command
 
       # - name: Setup npm
       #   run: npm install
