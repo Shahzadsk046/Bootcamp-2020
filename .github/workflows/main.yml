@@ -25,19 +25,11 @@ jobs:
         with:
           version: 12
         
-      
-        
-      - name: GitHub Action for Yarn
-        uses: Borales/actions-yarn@v2.3.0
-        with:
-    # Yarn command
-          cmd: install # npm install/ yarn install
-          
-#       - name: Build Yarn and npm
-#         uses: linchpin/action-build-yarn-npm@master
-        
+      - name: Installing npm
+        run: npm install      
+
       - name: Creating build
-        run: yarn build
+        run: npm run build
           
       - name: installing surge
         run: npm install -g surge
