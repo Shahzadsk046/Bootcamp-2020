@@ -52,4 +52,4 @@ jobs:
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge http://class5bootcamp2020shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./ http://class5bootcamp2020shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
