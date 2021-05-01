@@ -1,17 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Bootcamp Class 5
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,13 +23,9 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2-beta
         with:
-          version: 12
+          node-version: 12
         
-      - name: Install Packages
-        run: npm install
-
-      - name: Build page
-        run: npm run build
+      
         
 #       - name: GitHub Action for Yarn
 #         uses: Borales/actions-yarn@v2.3.0
@@ -52,4 +43,4 @@ jobs:
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge ./build/ http://class5_shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./ http://class5_shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
