@@ -24,30 +24,32 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
-      
-      # - name: Setup Node.js environment  
-      #   uses: actions/setup-node@v2.1.5
-      #   with:
-      #     version: 12
-      - name: Yarn install  
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          run: yarn install # will run `yarn install` command
-      
-      - name: Yarn Building
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          run: yarn build # will run `yarn build` command
 
-      # - name: Setup npm
-      #   run: npm install
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          version: 12
         
-      # - name: Build Package
-      #   run: npm run build
+      - name: Install Packages
+        run: npm install
         
-      - name: Installing surge
+      - name: Build page
+        run: npm run build
+        
+#       - name: GitHub Action for Yarn
+#         uses: Borales/actions-yarn@v2.3.0
+#         with:
+    # Yarn command
+#           cmd: install # npm install/ yarn install
+          
+#       - name: Build Yarn and npm
+#         uses: linchpin/action-build-yarn-npm@master
+        
+#       - name: Creating build
+#         run: yarn run build
+          
+      - name: installing surge
         run: npm install -g surge
         
-      - name: deploying to surge
+      - name: deploying on surge
         run: surge ./build http://class5bootcamp2020shahzad.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
