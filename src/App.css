@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.center{
+  text-align: center;
+  margin: 20 auto;
+}
+
+.pieClass {
+  /* height: 50vh;
+  width: 50vh; */
+  margin: 0 auto;
+}
