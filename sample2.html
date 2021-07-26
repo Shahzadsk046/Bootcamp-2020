@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Animation</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: darkcyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is 12th Class of Bootcamp 2020</h1>
+    <h3>This is Sample 2</h3>
+    <div id="box">
+        <h4>Animation</h4>
+    </div>
+
+
+
+
+
+    <script>
+        var elem = document.querySelector('#box');
+        elem.animate([
+            // {transform: 'scale(0.5)'},
+            {transform: 'translate(0,0) scale(0.5)', background: 'darkcyan', color: 'white'},
+            // {transform: 'scale(0.75)'},
+            {transform: 'translate(400px,0) scale(1)', background: 'darkgreen', color: 'black'},
+            // {transform: 'scale(1)'},
+            {transform: 'translate(400px,400px) scale(1.5)', background: 'red', color: 'yellow'},
+            // {transform: 'scale(0.75)'},
+            {transform: 'translate(0,400px) scale(1)', background: 'blue', color: 'pink'},
+            // {transform: 'scale(0.5)'},
+            {transform: 'translate(0,0) scale(0.5)', background: 'darkcyan', color: 'white'},
+        ],{
+            duration: 5000,
+            iterations: Infinity
+        });
+    </script>
+
+</body>
+</html>
