@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(240, 240, 240);
+}
+
+#cloud-div img{
+    width: 300px;
+
+}
+#plane-div img{
+    width: 300px;
+
+}
+
+.clouds, .birds{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* #bird{
+    transform: scaleX(-1);
+} */
+
+.runway{
+    height: 70px;
+    width: 100%;
+    background: lightslategray;
+    position: absolute;
+    bottom: 10%;
+    z-index: -1;
+
+}
